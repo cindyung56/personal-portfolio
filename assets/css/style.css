@@ -1,0 +1,147 @@
+:root{
+    --mistyrose: #F7E5E4;
+    --blackshadow: #BBACAF;
+    --lightred: #FFD2CF;
+    --spanishpink: #ffbfbf;
+    --melon: #F6ACAD;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+*{
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+
+/* Element selectors */
+
+body{
+    background-color: var(--mistyrose);
+    line-height: 1.1em;
+}
+
+header, footer{
+    background-color: var(--melon);
+    color: var(--white);
+    width: 100%;
+}
+
+header{
+    padding: 30px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 250%;
+}
+
+nav{
+    float: right;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+}
+
+nav ul li a{
+    color: var(--white);
+    font-size: 150%;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav ul li a:hover{
+    background-color: var(--blackshadow);
+}
+
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+
+main{
+    background-color: var(--white);
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 40px;
+}
+
+section{
+    background-color: var(--lightred);
+    padding: 15px;
+}
+
+section h2{
+    font-size: 200%;
+    background-color: var(--blackshadow);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Class selectors */
+
+
+
+.text-center{
+    text-align: center;
+}
+
+
+/* ID Selectors */
+
+#about-me{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about-me .img-class{
+    /* background-color: aliceblue; */
+    flex: 0 0 33.33%;
+    display: flex;
+    justify-content: center;
+}
+
+#about-me .img-class img{
+    max-width: 100%;
+    margin: 0 auto;
+    border: 5px dashed var(--melon);
+    border-radius: 125px;
+}
+
+#about-me .about-class{
+    /* background-color: lightgrey; */
+    flex: 0 0 66.6666%;
+}
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 800px){
+    #about-me .img-class{
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+
+    #about-me .about-class{
+        flex: 0 0 100%;
+    }
+}
