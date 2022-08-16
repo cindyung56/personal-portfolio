@@ -31,9 +31,9 @@ header, footer{
 
 header{
     padding: 25px;
-    position: relative;
+    position: fixed;
     top: 0;
-    bottom: 0;
+    left: 0;
     display: inline-flex;
     justify-content: space-between;
 }
@@ -44,29 +44,22 @@ header h1{
 
 nav{
     float: right;
-    /* background-color: aquamarine; */
     display: flex;
     justify-content: flex-end;
 }
 
-nav ul li{
-    list-style: none;
-    display: inline;
-}
 
-nav ul li a{
+nav a{
     color: var(--white);
     font-size: 150%;
-    text-decoration: none;
     margin-left: 25px;
     padding: 22px 15px;
 }
 
-nav ul li a:hover{
+nav a:hover{
     background-color: var(--blackshadow);
     color: var(--white);
 }
-
 
 footer{
     position: relative;
@@ -87,29 +80,18 @@ section{
     margin-bottom: 10px;
 }
 
-section h2{
-    font-size: 200%;
-    background-color: var(--blackshadow);
-    border: 3px solid var(--mistyrose);
-    padding: 15px;
-    margin-bottom: 10px;
-    color: white;
-}
-
 p{
     line-height: 1.5em;
     font-size: 100%;
+    margin-left: 5px;
 }
-
 
 a{
     text-decoration: none;
-    color: var(--darkred);
 }
 
-a:hover{
-    color: var(--blackshadow);
-}
+
+
 
 
 /* Class selectors */
@@ -123,20 +105,62 @@ a:hover{
     text-align: center;
 }
 
-.first-project{
-    flex-basis: 100%;
+.nav-link{
+    list-style: none;
+    display: inline;
+}
+
+.nav-link a, .nav-link a:visited{
+    color: var(--white);
+}
+
+.section-heading{
+    font-size: 200%;
+    width: 100%;
+    background-color: var(--blackshadow);
+    border: 3px solid var(--mistyrose);
+    padding: 15px;
+    margin-bottom: 15px;
+    color: white;
 }
 
 .card{
     flex-basis: 48%;
-    background-color: var(--lightred);
-    border: 1px solid var(--blackshadow);
-    margin-bottom: 10px;
+    background-color: var(--white);
+    /* border: 1px solid var(--blackshadow); */
+    margin-bottom: 20px;
+    height: 300px;
 }
 
+.card h3{
+    background-color: var(--blackshadow);
+    width: 50%;
+    padding: 10px;
+    font-size: 125%;
+}
 
+.card:visited{
+    color: black;
+}
 
+.card:hover{
+    opacity: 0.6;
+    box-shadow: 0.5em 0.5em 0.3em var(--blackshadow);
+    color: white;
+}
 
+.card:active{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.first-project{
+    flex-basis: 98%;
+}
+
+.first-project h3{
+    width: 25%;
+}
 
 
 
@@ -148,10 +172,11 @@ a:hover{
     justify-content: space-between;
     background-color: var(--lightred);
     padding: 15px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 #about-me .img-class{
-    /* background-color: aliceblue; */
     flex: 0 0 33%;
     display: flex;
     justify-content: center;
@@ -163,22 +188,22 @@ a:hover{
     height: auto;
     margin: 0 auto;
     /* border: 5px dashed var(--mistyrose);
+    background-color: white;
     border-radius: 125px; */
 }
 
 #about-me .about-class{
-    /* background-color: lightgrey; */
     flex: 0 0 66%;
 }
 
 #projects{
-    background-color: white;
+    background-color: var(--mistyrose);
     justify-content: space-around;
+    padding: 15px;
 }
 
-#projects h2{
-    width: 100%;
-}
+
+
 
 
 /* Media Queries */
