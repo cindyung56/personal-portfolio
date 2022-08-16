@@ -6,10 +6,13 @@
     --melon: #F6ACAD;
     --white: #FFFFFF;
     --black: #000000;
+    --darkred: darkred;
 }
 
 *{
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: "Fira Sans", Helvetica, sans-serif;
+    font-size: 1em;
+    scroll-behavior: smooth;
 }
 
 
@@ -27,7 +30,7 @@ header, footer{
 }
 
 header{
-    padding: 30px;
+    padding: 25px;
     position: relative;
     top: 0;
     bottom: 0;
@@ -43,7 +46,7 @@ nav{
     float: right;
     /* background-color: aquamarine; */
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 nav ul li{
@@ -56,10 +59,12 @@ nav ul li a{
     font-size: 150%;
     text-decoration: none;
     margin-left: 25px;
+    padding: 22px 15px;
 }
 
 nav ul li a:hover{
     background-color: var(--blackshadow);
+    color: var(--white);
 }
 
 
@@ -79,63 +84,105 @@ main{
 }
 
 section{
-    background-color: var(--lightred);
-    padding: 15px;
+    margin-bottom: 10px;
 }
 
 section h2{
     font-size: 200%;
     background-color: var(--blackshadow);
+    border: 3px solid var(--mistyrose);
     padding: 15px;
     margin-bottom: 10px;
+    color: white;
 }
 
+p{
+    line-height: 1.5em;
+    font-size: 100%;
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--darkred);
+}
+
+a:hover{
+    color: var(--blackshadow);
+}
 
 
 /* Class selectors */
 
-
+.flex-and-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .text-center{
     text-align: center;
 }
 
+.first-project{
+    flex-basis: 100%;
+}
+
+.card{
+    flex-basis: 48%;
+    background-color: var(--lightred);
+    border: 1px solid var(--blackshadow);
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
 
 /* ID Selectors */
 
 #about-me{
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--lightred);
+    padding: 15px;
 }
 
 #about-me .img-class{
     /* background-color: aliceblue; */
-    flex: 0 0 33.33%;
+    flex: 0 0 33%;
     display: flex;
     justify-content: center;
 }
 
 #about-me .img-class img{
+    object-fit: contain;
     max-width: 100%;
+    height: auto;
     margin: 0 auto;
-    border: 5px dashed var(--melon);
-    border-radius: 125px;
+    /* border: 5px dashed var(--mistyrose);
+    border-radius: 125px; */
 }
 
 #about-me .about-class{
     /* background-color: lightgrey; */
-    flex: 0 0 66.6666%;
+    flex: 0 0 66%;
 }
 
+#projects{
+    background-color: white;
+    justify-content: space-around;
+}
 
+#projects h2{
+    width: 100%;
+}
 
 
 /* Media Queries */
 @media screen and (max-width: 992px){
-
-}
-
-@media screen and (max-width: 800px){
     #about-me .img-class{
         flex: 0 0 100%;
         margin-bottom: 10px;
@@ -143,5 +190,20 @@ section h2{
 
     #about-me .about-class{
         flex: 0 0 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #about-me .img-class{
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+
+    #about-me .about-class{
+        flex: 0 0 100%;
+    }
+
+    .card{
+        flex-basis: 100%;
     }
 }
