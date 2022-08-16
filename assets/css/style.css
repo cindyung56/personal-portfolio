@@ -2,7 +2,6 @@
     --mistyrose: #F7E5E4;
     --blackshadow: #BBACAF;
     --lightred: #FFD2CF;
-    --spanishpink: #ffbfbf;
     --melon: #F6ACAD;
     --white: #FFFFFF;
     --black: #000000;
@@ -36,6 +35,7 @@ header{
     left: 0;
     display: inline-flex;
     justify-content: space-between;
+    z-index: 1;
 }
 
 header h1{
@@ -126,10 +126,13 @@ a{
 
 .card{
     flex-basis: 48%;
-    background-color: var(--white);
-    /* border: 1px solid var(--blackshadow); */
+    /* background-color: var(--white); */
     margin-bottom: 20px;
     height: 300px;
+    color: black;
+    background-size: cover; 
+    background-position: center;
+    opacity: 0.6;
 }
 
 .card h3{
@@ -144,9 +147,9 @@ a{
 }
 
 .card:hover{
-    opacity: 0.6;
+    opacity: 1;
     box-shadow: 0.5em 0.5em 0.3em var(--blackshadow);
-    color: white;
+    color: var(--white);
 }
 
 .card:active{
@@ -156,12 +159,28 @@ a{
 
 .first-project{
     flex-basis: 98%;
+    background-image: url(./images/horiseon.jpg);
 }
 
 .first-project h3{
     width: 25%;
 }
 
+.second-project{
+    background-image: url(./images/carbuncle-02.jpg);
+}
+
+.third-project{
+    background-image: url(./images/mirage-show.png);
+}
+
+.fourth-project{
+    background-image: url(./images/kitty.jpg);
+}
+
+.fifth-project{
+    background-image: url(./images/pikachu.png);
+}
 
 
 
@@ -192,6 +211,7 @@ a{
     border-radius: 125px; */
 }
 
+
 #about-me .about-class{
     flex: 0 0 66%;
 }
@@ -202,6 +222,9 @@ a{
     padding: 15px;
 }
 
+#projects h2{
+    border: 3px solid var(--lightred);
+}
 
 
 
