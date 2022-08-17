@@ -12,7 +12,7 @@ I plan on eventually reuploading this website as my new portfolio once I have up
 
 GitHub repository: https://github.com/cindyung56/personal-portfolio
 
-Link to page: 
+Link to page: https://cindyung56.github.io/personal-portfolio/
 
 ## Inspiration
 
