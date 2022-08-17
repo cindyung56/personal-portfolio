@@ -29,3 +29,5 @@ How to make images responsive: https://www.freecodecamp.org/news/css-responsive-
 How to make links open up in a new tab: https://stackoverflow.com/questions/27915253/how-to-open-links-in-a-new-tab-window-using-css
 
 How to center a background image using CSS: https://stackoverflow.com/questions/2643305/centering-a-background-image-using-css
+
+
